@@ -12,3 +12,11 @@ enButton.onclick = function () {
 jaButton.onclick = function () {
   i18n.changeLanguage('ja');
 };
+
+
+/* TODO:
+Style header better
+Do language button better
+
+
+*/

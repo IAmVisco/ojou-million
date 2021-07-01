@@ -7,7 +7,7 @@ body {
 }
 
 body:before {
-  content: "";
+  content: '';
   position: fixed;
   left: 0;
   right: 0;
@@ -30,6 +30,8 @@ body:before {
   text-align: center;
   margin-top: 0;
   padding-top: 0.67em;
+  color: white;
+  text-shadow: 2px 2px 3px black;
 }
 
 .timeline {
@@ -44,6 +46,7 @@ body:before {
   content: '';
   position: absolute;
   left: 50%;
+  top: 65px;
   width: 3px;
   height: 100%;
   background: #eeeeee;
@@ -58,7 +61,7 @@ body:before {
   list-style: none;
   position: relative;
   width: 50%;
-  padding: 20px 40px;
+  padding: 16px 40px 20px;
   box-sizing: border-box;
 }
 
@@ -74,20 +77,13 @@ body:before {
   clear: both;
 }
 
-.content {
-  padding: 12px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
 .timeline-left:before {
   content: '';
   position: absolute;
   width: 10px;
   height: 10px;
   top: 24px;
-  right: -6px;
+  right: -6.5px;
   background: rgba(233, 33, 99, 1);
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
@@ -99,20 +95,35 @@ body:before {
   width: 10px;
   height: 10px;
   top: 24px;
-  left: -4px;
+  left: -3.5px;
   background: rgba(233, 33, 99, 1);
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
 }
 
-.content > h3 {
+.card {
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card > h3 {
   padding: 0;
-  margin: 0;
+  margin: 0 0 0.5em;
   color: rgba(233, 33, 99, 1);
   font-weight: 600;
 }
 
-.content > p {
+.content > h3 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-weight: 600;
+  text-shadow: 2px 2px 3px black;
+}
+
+.card > p {
   margin: 10px 0 0;
   padding: 0;
 }
@@ -161,7 +172,7 @@ body:before {
 
   .timeline:before {
     left: 20px;
-    height: 100%;
+    top: 32px
   }
 
   .timeline-left,
@@ -172,8 +183,8 @@ body:before {
     padding-bottom: 50px;
   }
 
-  .timeline-left,
-  .timeline-right {
+  .timeline-left:before,
+  .timeline-right:before {
     top: -18px;
     left: 16px;
   }
@@ -187,7 +198,9 @@ body:before {
 }
 
 .language-switch {
-  position: absolute;
+  /*position: absolute;*/
+  position: fixed;
+  z-index: 2;
   top: 10px;
   right: 10px;
   background-color: #ffffff;
@@ -199,4 +212,27 @@ body:before {
 .higanbana {
   float: right;
   height: 250px;
+}
+
+.thumbnail {
+  /*height: 225px;*/
+  /*width: 400px;*/
+  width: 100%;
+  object-fit: cover;
+}
+
+.filler100 {
+  height: 100px;
+}
+
+.filler200 {
+  height: 200px;
+}
+
+.filler300 {
+   height: 300px;
+}
+
+.filler600 {
+   height: 600px;
 }
