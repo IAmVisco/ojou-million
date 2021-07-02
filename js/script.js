@@ -13,10 +13,16 @@ jaButton.onclick = function () {
   i18n.changeLanguage('ja');
 };
 
-
 /* TODO:
 Style header better
 Do language button better
-
-
 */
+
+// const parallax = document.getElementById('bg');
+// const speed = 0.5;
+//
+// window.onscroll = function () {
+//   const windowYOffset = window.pageYOffset;
+//   parallax.style.backgroundPosition = '10% ' + (windowYOffset * speed) + 'px';
+//   console.log('10% ' + (windowYOffset * speed) + 'px')
+// };
