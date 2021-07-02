@@ -16,6 +16,9 @@ jaButton.onclick = function () {
 /* TODO:
 Style header better
 Do language button better
+Add huge 祝 at the bottom
+Add arrow at the bottom maybe
+Convert/resize all pics
 */
 
 // const parallax = document.getElementById('bg');

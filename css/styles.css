@@ -186,10 +186,6 @@ body:before {
     top: 32px
   }
 
-  .timeline-tag {
-    width: 80px;
-  }
-
   .timeline-tag > h4 {
     font-size: 14px;
   }
