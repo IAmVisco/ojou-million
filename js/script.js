@@ -14,11 +14,14 @@ jaButton.onclick = function () {
 };
 
 /* TODO:
+Restyle
 Style header better
 Do language button better
 Add huge 祝 at the bottom
 Add arrow at the bottom maybe
 Convert/resize all pics
+Credits
+Scrollspy maybe
 */
 
 // const parallax = document.getElementById('bg');

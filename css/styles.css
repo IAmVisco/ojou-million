@@ -66,6 +66,17 @@ body:before {
   box-sizing: border-box;
 }
 
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 24px;
+  background: rgba(233, 33, 99, 1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+}
+
 .timeline-left {
   float: left;
   text-align: right;
@@ -79,27 +90,11 @@ body:before {
 }
 
 .timeline-left:before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 24px;
   right: -6.5px;
-  background: rgba(233, 33, 99, 1);
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
 }
 
 .timeline-right:before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 24px;
   left: -3.5px;
-  background: rgba(233, 33, 99, 1);
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
 }
 
 .card {
@@ -167,12 +162,6 @@ body:before {
 @media (max-width: 1000px) {
   .timeline {
     width: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-  .timeline {
-    width: 100%;
     padding-bottom: 0;
   }
 
@@ -207,7 +196,7 @@ body:before {
 
   .timeline-left .timeline-tag,
   .timeline-right .timeline-tag {
-    top: -30px;
+    top: -34px;
     left: 50px;
     right: inherit;
   }
