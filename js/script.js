@@ -1,5 +1,5 @@
-const enButton = document.getElementById('en-btn');
-const jaButton = document.getElementById('ja-btn');
+const enButton = document.getElementById('enBtn');
+const jaButton = document.getElementById('jaBtn');
 const i18n = domI18n({
   languages: ['en', 'ja'],
 });
@@ -13,14 +13,30 @@ jaButton.onclick = function () {
   i18n.changeLanguage('ja');
 };
 
+const modal = document.getElementById('creditsModal');
+const modalButton = document.getElementById('creditsBtn');
+const span = document.getElementsByClassName('modal-close')[0];
+
+modalButton.onclick = () => {
+  modal.style.display = 'block';
+};
+
+span.onclick = () => {
+  modal.style.display = 'none';
+};
+
+window.onclick = (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+};
+
 /* TODO:
 Restyle
 Style header better
 Do language button better
 Add huge 祝 at the bottom
 Add arrow at the bottom maybe
-Convert/resize all pics
-Credits
 Scrollspy maybe
 */
 

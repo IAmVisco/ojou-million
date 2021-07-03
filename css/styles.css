@@ -26,6 +26,7 @@ body:before {
   /*filter: blur(1px);*/
 }
 
+/*<editor-fold desc="Timeline">*/
 .timeline-title {
   font-size: 60px;
   text-align: center;
@@ -159,6 +160,56 @@ body:before {
   left: -160px;
 }
 
+/*</editor-fold>*/
+
+/*<editor-fold desc="Modal">*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  40% { opacity: 0.3; }
+  60% { opacity: 0.5; }
+  80% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 60%;
+}
+
+.modal-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*</editor-fold>*/
+
 @media (max-width: 1000px) {
   .timeline {
     width: 100%;
@@ -200,6 +251,10 @@ body:before {
     left: 50px;
     right: inherit;
   }
+
+  .modal-content {
+    width: 80%;
+  }
 }
 
 .language-switch {
@@ -211,6 +266,7 @@ body:before {
   background-color: white;
   padding: 5px;
   border-radius: 5px;
+  text-align: right;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -220,8 +276,6 @@ body:before {
 }
 
 .thumbnail {
-  /*height: 225px;*/
-  /*width: 400px;*/
   width: 100%;
   object-fit: cover;
 }
