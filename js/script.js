@@ -2,10 +2,10 @@ const ENGLISH = 'en';
 const JAPANESE = 'ja';
 
 document.querySelectorAll('.thumbnail').forEach((img) => {
-  console.log(img.id)
   img.src = `images/${img.id}`;
-})
+});
 
+// I18n
 const enButton = document.getElementById('enBtn');
 const jaButton = document.getElementById('jaBtn');
 const i18n = domI18n({
@@ -21,6 +21,14 @@ jaButton.onclick = () => {
   i18n.changeLanguage(JAPANESE);
 };
 
+// Scroll progress
+window.onscroll = () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById('progressBar').style.width = (winScroll / height) * 100 + '%';
+};
+
+// Modal
 const modal = document.getElementById('creditsModal');
 const modalButton = document.getElementById('creditsBtn');
 const span = document.getElementsByClassName('modal-close')[0];
@@ -43,14 +51,4 @@ window.onclick = (event) => {
 Restyle
 Style header better
 Do language button better
-Scrollspy maybe
 */
-
-// const parallax = document.getElementById('bg');
-// const speed = 0.5;
-//
-// window.onscroll = function () {
-//   const windowYOffset = window.pageYOffset;
-//   parallax.style.backgroundPosition = '10% ' + (windowYOffset * speed) + 'px';
-//   console.log('10% ' + (windowYOffset * speed) + 'px')
-// };

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+:root {
+  --accent-color: rgba(233, 33, 99, 1);
+  --bg-color: rgba(241, 241, 241, 1);
+  --text-color: white;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -20,10 +26,6 @@ body:before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /*-webkit-filter: blur(1px);*/
-  /*-moz-filter: blur(1px);*/
-  /*filter: blur(1px);*/
 }
 
 /*<editor-fold desc="Timeline">*/
@@ -32,7 +34,7 @@ body:before {
   text-align: center;
   margin-top: 0;
   padding-top: 0.67em;
-  color: white;
+  color: var(--text-color);
   text-shadow: 2px 2px 3px black;
 }
 
@@ -73,7 +75,7 @@ body:before {
   width: 10px;
   height: 10px;
   top: 24px;
-  background: rgba(233, 33, 99, 1);
+  background: var(--accent-color);
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
 }
@@ -100,7 +102,7 @@ body:before {
 
 .card {
   padding: 12px;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   border-radius: 4px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -108,7 +110,7 @@ body:before {
 .card > h3 {
   padding: 0;
   margin: 0 0 0.5em;
-  color: rgba(233, 33, 99, 1);
+  color: var(--accent-color);
   font-weight: bold;
   font-size: 1.3em;
 }
@@ -116,7 +118,7 @@ body:before {
 .content > h3 {
   padding: 0;
   margin: 0;
-  color: white;
+  color: var(--text-color);
   font-weight: bold;
   text-shadow: 2px 2px 3px black;
   font-size: 1.3em;
@@ -136,13 +138,8 @@ body:before {
   padding: 8px 16px;
   border-radius: 18px;
 
-  /*background: rgba(233, 33, 99, 1);*/
-  /*color: white;*/
-  /*box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9);*/
-
-  /*background: rgba(255, 255, 255, 1);*/
   background: rgba(255, 255, 255, 1);
-  color: rgba(233, 33, 99, 1);
+  color: var(--accent-color);
   box-shadow: 0 0 0 3px rgb(229, 199, 40);
 }
 
@@ -191,7 +188,7 @@ body:before {
 }
 
 .modal-close {
-  color: #aaaaaa;
+  color: rgba(170, 170, 170, 1);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -274,9 +271,23 @@ body:before {
   z-index: 2;
   top: 10px;
   right: 10px;
-  background-color: white;
+  background-color: var(--bg-color);
   padding: 5px;
   border-radius: 5px;
   text-align: right;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+
+.progress-bar {
+  height: 2px;
+  background: var(--accent-color);
+  width: 0;
 }
