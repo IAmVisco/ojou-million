@@ -17,6 +17,7 @@ body:before {
   display: block;
 
   background-image: url("../images/bg_dark.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 

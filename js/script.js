@@ -1,16 +1,19 @@
+const ENGLISH = 'en';
+const JAPANESE = 'ja';
+
 const enButton = document.getElementById('enBtn');
 const jaButton = document.getElementById('jaBtn');
 const i18n = domI18n({
-  languages: ['en', 'ja'],
+  languages: [ENGLISH, JAPANESE],
 });
 document.body.style.display = 'block';
 
-enButton.onclick = function () {
-  i18n.changeLanguage('en');
+enButton.onclick = () => {
+  i18n.changeLanguage(ENGLISH);
 };
 
-jaButton.onclick = function () {
-  i18n.changeLanguage('ja');
+jaButton.onclick = () => {
+  i18n.changeLanguage(JAPANESE);
 };
 
 const modal = document.getElementById('creditsModal');
