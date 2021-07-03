@@ -35,8 +35,6 @@ window.onclick = (event) => {
 Restyle
 Style header better
 Do language button better
-Add huge 祝 at the bottom
-Add arrow at the bottom maybe
 Scrollspy maybe
 */
 
