@@ -1,6 +1,11 @@
 const ENGLISH = 'en';
 const JAPANESE = 'ja';
 
+document.querySelectorAll('.thumbnail').forEach((img) => {
+  console.log(img.id)
+  img.src = `images/${img.id}`;
+})
+
 const enButton = document.getElementById('enBtn');
 const jaButton = document.getElementById('jaBtn');
 const i18n = domI18n({
