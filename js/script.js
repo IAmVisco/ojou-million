@@ -22,11 +22,11 @@ jaButton.onclick = () => {
 };
 
 // Scroll progress
-window.onscroll = () => {
-  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  document.getElementById('progressBar').style.width = (winScroll / height) * 100 + '%';
-};
+// window.onscroll = () => {
+//   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//   document.getElementById('progressBar').style.width = (winScroll / height) * 100 + '%';
+// };
 
 // Modal
 const modal = document.getElementById('creditsModal');
