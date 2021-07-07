@@ -13,6 +13,7 @@ body {
 
   background-image: url("../images/bg.jpg");
   background-size: contain;
+  background-color: #212121;
 }
 
 /*<editor-fold desc="Timeline">*/
